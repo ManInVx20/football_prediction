@@ -1,4 +1,4 @@
-result,mean_10_home_goal,mean_10_home_possesion_pct,mean_10_home_shot_on_goal,mean_10_home_shot,mean_10_home_corner,mean_10_away_goal,mean_10_away_possesion_pct,mean_10_away_shot_on_goal,mean_10_away_shot,mean_10_away_corner
+result,mean_10_home_goal,mean_10_home_possession_pct,mean_10_home_shot_on_goal,mean_10_home_shot,mean_10_home_corner,mean_10_away_goal,mean_10_away_possession_pct,mean_10_away_shot_on_goal,mean_10_away_shot,mean_10_away_corner
 3,2.0,0.5,5.0,16.0,11.0,1.0,0.5,2.0,8.0,3.0
 3,3.0,0.68,11.0,34.0,12.0,1.0,0.32,3.0,7.0,3.0
 1,1.0,0.44,5.0,9.0,3.0,1.0,0.56,1.0,6.0,3.0

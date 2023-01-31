@@ -32,8 +32,8 @@ class MatchSpider(scrapy.Spider):
         data['away_shot'] = int(shot_data_away[0].split(' ')[0])
         data['home_shot_on_goal'] = int(shot_data_home[0].split(' ')[1][1:-1])
         data['away_shot_on_goal'] = int(shot_data_away[0].split(' ')[1][1:-1])
-        data['home_possesion_pct'] = int(response.xpath('//span[@data-home-away="home"][@data-stat="possessionPct"]/text()').getall()[0][0:-1]) / 100
-        data['away_possesion_pct'] = int(response.xpath('//span[@data-home-away="away"][@data-stat="possessionPct"]/text()').getall()[0][0:-1]) / 100
+        data['home_possession_pct'] = int(response.xpath('//span[@data-home-away="home"][@data-stat="possessionPct"]/text()').getall()[0][0:-1]) / 100
+        data['away_possession_pct'] = int(response.xpath('//span[@data-home-away="away"][@data-stat="possessionPct"]/text()').getall()[0][0:-1]) / 100
         data['home_corner'] = int(response.xpath('//td[@data-home-away="home"][@data-stat="wonCorners"]/text()').getall()[0])
         data['away_corner'] = int(response.xpath('//td[@data-home-away="away"][@data-stat="wonCorners"]/text()').getall()[0])
         # data['home_foul'] = int(response.xpath('//td[@data-home-away="home"][@data-stat="foulsCommitted"]/text()').getall()[0])
