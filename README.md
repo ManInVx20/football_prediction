@@ -6,6 +6,7 @@ This is a Python project that help us learn how to crawl data, clean data, analy
 You must install [Python](https://www.python.org/) and [pip](https://pip.pypa.io/en/stable/) before installing these packages:
 - [Scrapy](https://pypi.org/project/Scrapy/)
 - [scrapy-selenium](https://pypi.org/project/scrapy-selenium/)
+- [Jupyter](https://pypi.org/project/jupyter/)
 - [matplotlib](https://pypi.org/project/matplotlib/)
 - [seaborn](https://pypi.org/project/seaborn/)
 - [scikit-learn](https://pypi.org/project/scikit-learn/)
