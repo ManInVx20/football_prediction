@@ -21,7 +21,7 @@ class MatchSpider(scrapy.Spider):
     def parseMatch(self, response):
         data = dict()
         data['date'] = response.xpath('//div[@data-module="gameInformation"]//span/@data-date').getall()[0][0:10]
-        # data['S'] = response.xpath('//div[@class="game-details header"]/text()').getall()[0].strip('\n\t ')
+        # data['season'] = response.xpath('//div[@class="game-details header"]/text()').getall()[0].strip('\n\t ')
         data['home'] = response.xpath('//span[@class="long-name"]/text()').getall()[0]
         data['away'] = response.xpath('//span[@class="long-name"]/text()').getall()[1]
         data['home_goal'] = int(response.xpath('//span[@data-home-away="home"][@data-stat="score"]/text()').getall()[0].strip('\n\t '))
@@ -36,10 +36,10 @@ class MatchSpider(scrapy.Spider):
         data['away_possesion_pct'] = int(response.xpath('//span[@data-home-away="away"][@data-stat="possessionPct"]/text()').getall()[0][0:-1]) / 100
         data['home_corner'] = int(response.xpath('//td[@data-home-away="home"][@data-stat="wonCorners"]/text()').getall()[0])
         data['away_corner'] = int(response.xpath('//td[@data-home-away="away"][@data-stat="wonCorners"]/text()').getall()[0])
-        # data['HF'] = int(response.xpath('//td[@data-home-away="home"][@data-stat="foulsCommitted"]/text()').getall()[0])
-        # data['AF'] = int(response.xpath('//td[@data-home-away="away"][@data-stat="foulsCommitted"]/text()').getall()[0])
-        # data['HY'] = int(response.xpath('//td[@data-home-away="home"][@data-stat="yellowCards"]/text()').getall()[0])
-        # data['AY'] = int(response.xpath('//td[@data-home-away="away"][@data-stat="yellowCards"]/text()').getall()[0])
-        # data['HR'] = int(response.xpath('//td[@data-home-away="home"][@data-stat="redCards"]/text()').getall()[0])
-        # data['AR'] = int(response.xpath('//td[@data-home-away="away"][@data-stat="redCards"]/text()').getall()[0])
+        # data['home_foul'] = int(response.xpath('//td[@data-home-away="home"][@data-stat="foulsCommitted"]/text()').getall()[0])
+        # data['away_foul'] = int(response.xpath('//td[@data-home-away="away"][@data-stat="foulsCommitted"]/text()').getall()[0])
+        # data['home_yellow'] = int(response.xpath('//td[@data-home-away="home"][@data-stat="yellowCards"]/text()').getall()[0])
+        # data['away_yellow'] = int(response.xpath('//td[@data-home-away="away"][@data-stat="yellowCards"]/text()').getall()[0])
+        # data['home_red'] = int(response.xpath('//td[@data-home-away="home"][@data-stat="redCards"]/text()').getall()[0])
+        # data['away_red'] = int(response.xpath('//td[@data-home-away="away"][@data-stat="redCards"]/text()').getall()[0])
         yield data
