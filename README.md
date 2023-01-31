@@ -21,7 +21,7 @@ scrapy crawl match -o ../dataset/data.csv
 ```
 You will have a file called `data.csv` in `dataset` directory until it finishes.
 
-### Data cleaning
+### Data cleaning and preprocessing
 
 Run `data_cleaning.ipynb` file in `notebook` directory.
 
